@@ -8,4 +8,4 @@
 - **Backend**: Orquestación de llamadas a TMDB y normalización de datos.
 - **Base de datos**: Almacenamiento de entidades normalizadas.
 
-*Nota: este documento describe la arquitectura heredada y puede estar obsoleta.*
+_Nota: este documento describe la arquitectura heredada y puede estar obsoleta._

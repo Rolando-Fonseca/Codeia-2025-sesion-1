@@ -1,11 +1,10 @@
-# Changelog
+# Changelog - Verflix
 
-All notable changes to this project will be documented in this file.
+## [0.1.0] - 2026-03-11
 
-## [Unreleased]
-- Inicialización del repositorio con estructura básica.
-- Creación de la documentación inicial.
+### Añadido
 
-## [v1.0.0] - 2026-03-07
-### Added
-- Primer commit con archivos de ejemplo.
+- Conexión real con la API de TMDB (Trending Movies).
+- Sistema de normalización de datos para mostrar títulos y pósters.
+- Configuración de seguridad con archivo `.env` para la API Key.
+- Estructura de archivos organizada en la carpeta `src`.

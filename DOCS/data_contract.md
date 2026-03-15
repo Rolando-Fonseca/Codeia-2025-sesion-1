@@ -3,19 +3,21 @@
 Define el esquema y las reglas que debe cumplir cualquier objeto `Movie` transformado en la aplicación.
 
 ## Esquema
+
 ```ts
 interface Movie {
-  id: number;                    // requerido, entero positivo
-  title: string;                 // requerido, no vacío
-  overview: string;              // opcional, cadena ("" si falta)
-  poster: string | null;         // opcional, URL completa o null
-  year: number | null;           // opcional, YYYY o null si desconocido
-  genres: string[];              // requerido, al menos un elemento
-  rating: number | null;         // opcional, 0..1 o null si no disponible
+  id: number; // requerido, entero positivo
+  title: string; // requerido, no vacío
+  overview: string; // opcional, cadena ("" si falta)
+  poster: string | null; // opcional, URL completa o null
+  year: number | null; // opcional, YYYY o null si desconocido
+  genres: string[]; // requerido, al menos un elemento
+  rating: number | null; // opcional, 0..1 o null si no disponible
 }
 ```
 
 ### Reglas de validación
+
 - `id` debe venir del API y no puede duplicarse entre registros.
 - `title` se normaliza (trim + capitalización simple) y no puede quedar vacío.
 - `overview` se limpia de HTML y se recorta a 1000 caracteres max.
@@ -26,6 +28,7 @@ interface Movie {
 - Todos los campos adicionales deben ser eliminados previamente (no permitir objetos adyacentes).
 
 ## Casos límite y respuestas esperadas
+
 1. **Pelicula sin poster**
    - Entrada: `{..., poster_path: null, ...}`
    - Salida: `poster: null` en el artefacto y la documentación debe reflejar que `poster` es nullable.

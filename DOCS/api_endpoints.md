@@ -1,13 +1,13 @@
 # API Endpoints TMDB
 
-| Endpoint | Description | Rate Limit | Example Request | Example Response |
-|----------|-------------|------------|-----------------|------------------|
-| `/movie/{id}` | Get movie details | 40 req/10s | `GET /movie/550?api_key=API_KEY` | `{ "id": 550, "title": "Fight Club" }` |
-| `/search/movie` | Search movies | 40 req/10s | `GET /search/movie?query=Inception&api_key=API_KEY` | `{ "results": [...] }` |
-| `/search/tv` | Search TV series | 40 req/10s | `GET /search/tv?query=Breaking+Bad&api_key=API_KEY` | `{ "results": [...] }` |
-| `/trending/{media_type}/{time_window}` | Trending movies/TV | 40 req/10s | `GET /trending/all/day?api_key=API_KEY` | `{ "results": [...] }` |
+| Endpoint                               | Description        | Rate Limit | Example Request                                     | Example Response                       |
+| -------------------------------------- | ------------------ | ---------- | --------------------------------------------------- | -------------------------------------- |
+| `/movie/{id}`                          | Get movie details  | 40 req/10s | `GET /movie/550?api_key=API_KEY`                    | `{ "id": 550, "title": "Fight Club" }` |
+| `/search/movie`                        | Search movies      | 40 req/10s | `GET /search/movie?query=Inception&api_key=API_KEY` | `{ "results": [...] }`                 |
+| `/search/tv`                           | Search TV series   | 40 req/10s | `GET /search/tv?query=Breaking+Bad&api_key=API_KEY` | `{ "results": [...] }`                 |
+| `/trending/{media_type}/{time_window}` | Trending movies/TV | 40 req/10s | `GET /trending/all/day?api_key=API_KEY`             | `{ "results": [...] }`                 |
 
-*Límites sujetos a cambios según política de TMDB.*
+_Límites sujetos a cambios según política de TMDB._
 
 ## Notas de UI
 
