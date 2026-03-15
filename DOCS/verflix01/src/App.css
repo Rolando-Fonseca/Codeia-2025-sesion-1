@@ -1,35 +1,58 @@
-/* Barra de Navegación */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+/* Navbar sencilla y limpia */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, transparent);
-  display: flex;
-  align-items: center;
-  padding: 0 40px;
-  z-index: 100;
-  transition: background-color 0.5s;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-logo {
   color: #e50914;
   font-weight: bold;
-  font-size: 30px;
-  text-decoration: none;
+  font-size: 28px;
 }
 
-/* Espaciado para que el contenido no quede debajo del menú */
-.main-content {
-  padding-top: 100px;
+.container {
+  padding: 20px 40px;
 }
 
-/* Mensaje de Bienvenida (Hero) */
-.hero {
-  margin-bottom: 40px;
+/* AQUÍ ESTÁ EL TRUCO: Fichas más pequeñas (150px) */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
 }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.movie-card {
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.movie-title {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  /* Esto evita que el título sea muy grande */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-rating {
+  color: #46d369;
+  font-size: 11px;
 }
